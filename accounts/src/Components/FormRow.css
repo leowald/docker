@@ -1,0 +1,19 @@
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .form-row label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    flex-basis: 35%;
+  }
+  
+  .form-row input {
+    flex-basis: 60%;
+  }
