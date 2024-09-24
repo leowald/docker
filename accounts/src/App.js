@@ -12,7 +12,7 @@ function App() {
 
   async function getAccounts() {
     try {
-      const response = await get("http://localhost:3000/api/accounts/");
+      const response = await get("http://localhost:80/api/accounts/");
 
       updateAccounts(response.accounts);
     } catch {}
@@ -25,7 +25,7 @@ function App() {
   async function addAccount(account) {
     try {
       const response = await post(
-        "http://localhost:3000/api/accounts/",
+        "http://localhost:80/api/accounts/",
         account
       );
       updateAccounts((prev) => [...prev, account]);
@@ -35,7 +35,7 @@ function App() {
   async function removeAccount(email) {
     try {
       const response = await remove(
-        `http://localhost:3000/api/accounts/${email}`,
+        `http://localhost:80/api/accounts/${email}`,
         {}
       );
       updateAccounts((prev) =>
@@ -47,7 +47,7 @@ function App() {
   async function editAccount(email) {
     /*try {
       const response = await patch(
-        `http://localhost:3000/api/accounts/${email}`,
+        `http://localhost:80/api/accounts/${email}`,
         {
           movements: [500],
         }
